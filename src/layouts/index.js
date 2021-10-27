@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles.scss";
 import Header from "../components/ui/header";
 import Backdrop from "../components/ui/backdrop";
+import Footer from "../components/ui/footer";
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -29,6 +30,8 @@ const Layout = ({ children }) => {
       />
 
       <main className="main">{children}</main>
+
+      <Footer />
     </>
   );
 };

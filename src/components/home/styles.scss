@@ -26,6 +26,10 @@
       left: 0;
       top: 38px;
       z-index: -1;
+
+      @media screen and (max-width: 400px) {
+        opacity: 0.5;
+      }
     }
 
     > .wrapper {

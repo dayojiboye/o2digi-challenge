@@ -97,6 +97,10 @@
           background: url("../../../assets/dots-review.png") no-repeat;
           background-size: cover;
           z-index: 1;
+
+          @media screen and (max-width: 400px) {
+            opacity: 0.5;
+          }
         }
 
         h2 {

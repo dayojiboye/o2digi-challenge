@@ -11,6 +11,10 @@
     bottom: 20px;
     background: url("../assets/dots-bottom.png") no-repeat;
     background-size: cover;
+
+    @media screen and (max-width: 400px) {
+      opacity: 0.5;
+    }
   }
 
   @media screen and (max-width: 1023px) {
