@@ -1,0 +1,124 @@
+.container {
+  width: 100%;
+  padding: 106px 0px 157px;
+  position: relative;
+
+  @media screen and (max-width: 1023px) {
+    padding: 120px 0px;
+  }
+
+  .hero {
+    width: 100%;
+
+    @media screen and (max-width: 1023px) {
+      padding: 0px 16px;
+      max-width: 512px;
+      margin: 0 auto;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 139px;
+      height: 131px;
+      background: url("../../assets/three-dots1.svg") no-repeat;
+      background-size: contain;
+      left: 0;
+      top: 38px;
+      z-index: -1;
+    }
+
+    > .wrapper {
+      display: flex;
+      align-items: flex-end;
+
+      @media screen and (max-width: 1023px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-left {
+        width: fit-content;
+        flex-shrink: 0;
+
+        @media screen and (max-width: 1023px) {
+          flex-direction: column;
+          align-items: center;
+          display: flex;
+        }
+
+        h1 {
+          color: var(--black);
+          font-size: 48px;
+          max-width: 348px;
+          line-height: 1;
+
+          @media screen and (max-width: 700px) {
+            font-size: 34px;
+          }
+        }
+
+        > p {
+          font-weight: 300;
+          font-size: 21px;
+          color: var(--text-primary);
+          max-width: 430px;
+          margin: 24px 0px 29px;
+
+          @media screen and (max-width: 700px) {
+            font-size: 18px;
+          }
+        }
+
+        .search {
+          width: 100%;
+          max-width: 430px;
+          position: relative;
+
+          label {
+            position: absolute;
+            top: 50%;
+            left: 18px;
+            transform: translateY(-50%);
+            color: #c2cfe0;
+          }
+
+          input {
+            padding: 19px 115px 19px 48px;
+          }
+
+          > button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 7px;
+          }
+        }
+      }
+
+      .hero-right {
+        width: fit-content;
+        margin-left: 78px;
+        // flex-shrink: 0;
+
+        @media screen and (max-width: 1023px) {
+          margin-left: 0px;
+          margin-bottom: 32px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          // display: none;
+
+          > div {
+            width: 100% !important;
+
+            > div {
+              max-width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

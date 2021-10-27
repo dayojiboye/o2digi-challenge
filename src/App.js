@@ -1,11 +1,13 @@
 import React from "react";
-
 import Layout from "./layouts";
+import { HomePage } from "./pages/home";
 
 function App() {
   return (
     <>
-      <Layout></Layout>
+      <Layout>
+        <HomePage />
+      </Layout>
     </>
   );
 }

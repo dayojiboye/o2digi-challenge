@@ -1,0 +1,106 @@
+.others-section {
+  width: 100%;
+  margin-top: 57px;
+
+  > .wrapper {
+    position: relative;
+
+    @media screen and (max-width: 1023px) {
+      padding: 0px 16px;
+    }
+
+    > h2 {
+      font-size: 24px;
+      color: var(--black);
+      font-weight: 600;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: 1023px) {
+       text-align: center;
+      }
+    }
+
+    > .carousel {
+      width: 80vw;
+      position: relative;
+      left: 0;
+      top: 0;
+      right: 0;
+
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+        max-width: 512px;
+        margin: 0 auto;
+      }
+
+      > .swiper-wrapper {
+        .swiper-slide {
+          opacity: 0.25;
+
+          &.swiper-slide-next {
+            + .swiper-slide {
+              + .swiper-slide {
+                + .swiper-slide {
+                  opacity: 0.25;
+                }
+              }
+            }
+          }
+
+          &.swiper-slide-visible {
+            opacity: 1;
+          }
+        }
+      }
+
+      .others-card {
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          .others-card-body {
+            border: 2px solid var(--gold);
+
+            img {
+              transform: scale(1.2);
+            }
+          }
+
+          .others-card-footer {
+            p {
+              color: var(--gold);
+            }
+          }
+        }
+
+        .others-card-body {
+          box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.06);
+          border-radius: 10px;
+          background: #fff;
+          padding: 16px 42px;
+          margin-bottom: 16px;
+          border: 2px solid #fff;
+
+          img {
+            display: block;
+            margin: 0 auto;
+            width: 143px;
+            height: 100%;
+            max-width: 100%;
+            // object-fit: contain;
+          }
+        }
+
+        .others-card-footer {
+          margin-top: auto;
+
+          p {
+            font-weight: 600;
+            color: var(--black);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

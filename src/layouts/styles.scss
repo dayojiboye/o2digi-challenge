@@ -1,7 +1,19 @@
 .main {
   width: 100%;
+  position: relative;
 
-  @media screen and (max-width: 903px) {
+  &::after {
+    content: "";
+    width: 130px;
+    height: 70px;
+    position: absolute;
+    right: 13px;
+    bottom: 20px;
+    background: url("../assets/dots-bottom.png") no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 1023px) {
     margin-top: 70px;
   }
 }

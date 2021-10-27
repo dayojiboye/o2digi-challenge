@@ -1,0 +1,74 @@
+.bikes-card {
+  background: #fff;
+  box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 23px 24px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 400px) {
+    padding: 23px 16px;
+  }
+
+  .bike-card-header {
+    width: 100%;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--black);
+    }
+  }
+
+  .bike-card-body {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 400px) {
+      > div {
+        > div {
+          width: 100% !important;
+          max-width: 242px !important;
+          max-height: 230px;
+        }
+      }
+    }
+
+    &.not-lottie {
+      height: 202px;
+    }
+
+    img {
+      height: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .bike-card-footer {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    border-top: 1px solid #c2cfe0;
+    padding-top: 15px;
+    justify-content: space-between;
+    margin-top: auto;
+
+    .bike-card-footer-price {
+      display: flex;
+      flex-direction: column;
+
+      > span {
+        font-size: 16px;
+        color: var(--text-primary);
+
+        &:last-of-type {
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 11px;
+          color: var(--black);
+        }
+      }
+    }
+  }
+}
